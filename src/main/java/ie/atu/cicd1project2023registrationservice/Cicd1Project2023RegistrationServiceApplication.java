@@ -12,4 +12,6 @@ public class Cicd1Project2023RegistrationServiceApplication {
         SpringApplication.run(Cicd1Project2023RegistrationServiceApplication.class, args);
     }
 
+
+
 }

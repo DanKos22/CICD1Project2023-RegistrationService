@@ -19,7 +19,7 @@ public class RegistrationController {
         return verificationMessage;
 
     }
-
+    @PostMapping("/register")
     public String notifyDetails(@RequestBody PersonDetails personDetails){
 
         String notify = notifyClient.anyDetails(personDetails);
