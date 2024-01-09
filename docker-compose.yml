@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  registratation1-service:
+    image: registration:latest
+    ports:
+      - "8081:8081"
+    networks:
+          - my_network
+
+  notification-service:
+    image: notify:latest
+    ports:
+      - "8082:8082"
+    networks:
+      - my_network
+
+networks:
+  my_networks:
+    driver: bridge
