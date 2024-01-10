@@ -15,13 +15,11 @@ public class RegistrationController {
 
     @PostMapping("/Verify")
     public String verifyDetails(@RequestBody PersonDetails personDetails) {
-        String verificationMessage = String.format("Confirming %s email %s has purchased following purchase", personDetails.getName(), personDetails.getEmail());
+        String verificationMessage = String.format("Ticket request for Customer %s has been successful. The purchase is confirmed!", personDetails.getName(), personDetails.getEmail());
         return verificationMessage;
-
     }
     @PostMapping("/register")
     public String notifyDetails(@RequestBody PersonDetails personDetails){
-
         String notify = notifyClient.anyDetails(personDetails);
         return notify;
     }
