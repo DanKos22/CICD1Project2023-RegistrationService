@@ -15,7 +15,7 @@ public class RegistrationController {
 
     @PostMapping("/Verify")
     public String verifyDetails(@RequestBody PersonDetails personDetails) {
-        String verificationMessage = String.format("Ticket request for Customer %s has been successful. The purchase is confirmed!", personDetails.getName(), personDetails.getEmail());
+        String verificationMessage = String.format("Registering customer %s with email %s", personDetails.getName(), personDetails.getEmail());
         return verificationMessage;
     }
     @PostMapping("/register")
